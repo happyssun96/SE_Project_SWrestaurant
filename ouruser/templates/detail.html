@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block contents %}
+    <br>
+    <body>  
+ <div class="container">
+  <br>
+    <h2> 예약 날짜 : {{ details.title }} </h2>
+    <p> {{ details.pub_date }} </p>
+    <p> 예약 상세 : {{ details.body }} </p>
+    <br>
+    <a href="{% url 'home' %}" class="cta">예약 조회로 돌아가기</a>
+
+ </div>
+
+ {% endblock %}
+</body>

@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>웰컴 투 강의평가</title>
+
+    <link rel="stylesheet" href="/static/css/index_style.css?ver=1" />
+    <link rel="stylesheet" href="/static/css/normalize.css" />
+
+    <!-- 온라인 글꼴 -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{% url 'index' %}"/>
+  <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+  <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+  <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/themify/themify-icons.css">
+  <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+  <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+  <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+  <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+  <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+  <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+  <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/lightbox2/css/lightbox.min.css">
+  <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css?ver=1">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+  <!--===============================================================================================-->
+  </head>
+  </head>
+
+  <body>
+    {% load socialaccount %}
+    {% providers_media_js %}
+    <header class="header">
+      <div class="container">
+        <h1 class="logo"><a href="{% url 'index' %}" class="logo"><img class="image001" src="/static/image/noodles_icon_136355.png" alt="" />
+        </h1>
+        <nav class="nav">
+          <ul class="list">
+            <li class="list-item"><a href="{% url 'index'%}">홈</a></li>
+            <li class="list-item"><a href="{% url 'login'%}">로그인</a></li>     
+            <li class="list-item">
+              <a href="{% url 'register'%}">회원가입</a>
+            </li>
+            <!-- 강의평가 하이퍼링크 등록 요망 -->
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="section-slide" style="background-image: url(/static/images/Top-Five-Chinese-Restaurants-in-Paris-feature-1024x581.jpg);">
+      <div class="wrap-slick1">
+        <div class="slick1">
+          <div style="background-image: url(/static/images/Top-Five-Chinese-Restaurants-in-Paris-feature-1024x581.jpg);"> 
+        <div class="wrap-slick1-dots"></div>
+      </div>
+      </div>
+    </section>
+    <main class="main">
+      <div class="main-section">
+        <div class="container">
+          <p class="intro-desc">
+            선우반점에 어서오세요!
+          </p>
+          <a href="{% url 'login'%}" class="cta">식당 예약하기</a>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <ul class="footer-list">
+        <a href="#">이용약관</a>
+      </ul>
+      <ul class="footer-list">
+        <a href="#">개인정보처리방침</a>
+      </ul>
+      <ul class="footer-list">
+        <a href="#">문의하기</a>
+      </ul>
+    </footer>
+  </body>
+</html>

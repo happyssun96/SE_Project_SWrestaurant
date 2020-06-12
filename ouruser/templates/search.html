@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block contents %}
+
+{% for blog in sch_boards %}
+    <h2> 예약 날짜 : {{blog.title}} </h2>
+    <p> 예약 상세 : {{blog.summary}} </p>
+{% empty %} 
+    검색결과가 없습니다...
+{% endfor %} 
+<a href="{% url 'home' %}" class="cta">예약 조회로 돌아가기</a>
+{% endblock %}
